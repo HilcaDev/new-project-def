@@ -1,0 +1,29 @@
+{
+  "name": "proyect-one",
+  "version": "1.0.0",
+  "description": "Sitio Web - Estudio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass src/assets/sass/app.scss -wo src/assets/css/",
+    "css:watch" : "npm run build-css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HilcaDev/proyect-one.git"
+  },
+  "keywords": [
+    "HTML5",
+    "CSS3",
+    "SASS"
+  ],
+  "author": "HilcaDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HilcaDev/proyect-one/issues"
+  },
+  "homepage": "https://github.com/HilcaDev/proyect-one#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
