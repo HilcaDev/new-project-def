@@ -1,9 +1,74 @@
 @import "../theme/theme.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-.container-main {
-    display: flex;
+.card{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:15px;
+    grid-template-areas: "card-daniel  card-daniel   card-jonathan  card-kira"
+                         "card-jean    card-patrick  card-patrick   card-kira";
+
+    max-width: 1440px;
+    margin:80px auto;
+    //justify-items:center;  Porque esta propiedad no reflejo los cambios         
+    //font: {
+       // family:"Barlow Semi Condensed";
+       // size:15px;
+   // }
+    &-daniel{
+        @include grid(card-daniel,$white,$violet);
+        position: relative;
+        &__space{
+            margin: 0px;
+            &--bottom{
+               margin-bottom: 0px;
+          }
+        }
+        &__img{
+            float: left; /*Colocar la img al lado del texto*/
+            border-radius: 50%; /*Permite poner la imagen circular*/;
+            padding: 5px;
+        }
+        &__img2{
+            float: right;
+            position: absolute;
+            top:0px;
+            right:70px;
+        }
+        &__opacity{
+            opacity: 0.5;
+            &--seventy{
+                opacity: 0.7;
+            }
+        }
+    }
+
+    &-jonathan{
+        align-self: stretch;
+        @include grid(card-jonathan,$white,$dark-grayish-blue);
+    }
+
+    &-jean{
+        @include grid(card-jean,$dark-grayish-blue,$white);
+    }
+
+    &-patrick{
+        @include grid(card-patrick,$white,$dark-blue);
+    }
+
+    &-kira{
+        @include grid(card-kira,$dark-grayish-blue,$white);
+    }   
 }
 
-.color {
-    color: #ccc;
+@media screen and (max-width:768px){
+
+    .card{
+        grid-template-columns: 1fr;
+        grid-template-areas:"card-daniel"
+                            "card-jonathan"
+                            "card-jean"
+                            "card-patrick"
+                            "card-kira";
+    }
 }

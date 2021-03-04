@@ -1,4 +1,10 @@
-html, body {
-    margin: 0;
-    height: 100%;
+body{
+   background-color:hsl(210, 46%, 95%);
+   font-size:15px ;
+    
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0 7px;
 }

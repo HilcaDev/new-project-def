@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+body {
+  background-color: #ecf2f8;
+  font-size: 15px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 7px;
+}
+
+.card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+      grid-template-areas: "card-daniel  card-daniel   card-jonathan  card-kira" "card-jean    card-patrick  card-patrick   card-kira";
+  max-width: 1440px;
+  margin: 80px auto;
+}
+
+.card-daniel {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: card-daniel;
+  color: white;
+  background-color: #7541c8;
+  border-radius: 7px;
+  position: relative;
+}
+
+.card-daniel__space {
+  margin: 0px;
+}
+
+.card-daniel__space--bottom {
+  margin-bottom: 0px;
+}
+
+.card-daniel__img {
+  float: left;
+  /*Colocar la img al lado del texto*/
+  border-radius: 50%;
+  /*Permite poner la imagen circular*/
+  padding: 5px;
+}
+
+.card-daniel__img2 {
+  float: right;
+  position: absolute;
+  top: 0px;
+  right: 70px;
+}
+
+.card-daniel__opacity {
+  opacity: 0.5;
+}
+
+.card-daniel__opacity--seventy {
+  opacity: 0.7;
+}
+
+.card-jonathan {
+  -ms-flex-item-align: stretch;
+      -ms-grid-row-align: stretch;
+      align-self: stretch;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: card-jonathan;
+  color: white;
+  background-color: #48556a;
+  border-radius: 7px;
+}
+
+.card-jean {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: card-jean;
+  color: #48556a;
+  background-color: white;
+  border-radius: 7px;
+}
+
+.card-patrick {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: card-patrick;
+  color: white;
+  background-color: #19212e;
+  border-radius: 7px;
+}
+
+.card-kira {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: card-kira;
+  color: #48556a;
+  background-color: white;
+  border-radius: 7px;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "card-daniel" "card-jonathan" "card-jean" "card-patrick" "card-kira";
+  }
+}
+/*# sourceMappingURL=app.css.map */
