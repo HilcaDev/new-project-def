@@ -1,70 +1,75 @@
 @import "../theme/theme.scss";
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
-.card{
+.card {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-gap:15px;
-    grid-template-areas: "card-daniel  card-daniel   card-jonathan  card-kira"
-                         "card-jean    card-patrick  card-patrick   card-kira";
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    grid-template-areas:
+        "card-daniel  card-daniel   card-jonathan  card-kira"
+        "card-jean    card-patrick  card-patrick   card-kira";
 
     max-width: 1440px;
-    margin:80px auto;
-    &-daniel{
-        @include grid(card-daniel,$white,$violet);
+    margin: 80px auto;
+    &-avatar {
+        @include grid(card-daniel, $white, $violet);
         position: relative;
-        &__space{
+
+        &__space {
             margin: 0px;
-            &--bottom{
-               margin-bottom: 0px;
-          }
+            &--bottom {
+                margin-bottom: 0px;
+            }
         }
-        &__img{
+
+        &__img {
             float: left; /*Colocar la img al lado del texto*/
-            border-radius: 50%; /*Permite poner la imagen circular*/;
+            border-radius: 50%; /*Permite poner la imagen circular*/
             padding: 5px;
         }
-        &__img2{
+
+        &__quotes {
             float: right;
             position: absolute;
-            top:0px;
-            right:70px;
+            top: 0px;
+            right: 70px;
         }
-        &__opacity{
+
+        &--opacity {
             opacity: 0.5;
-            &--seventy{
+            &--seventy {
                 opacity: 0.7;
             }
         }
     }
 
-    &-jonathan{
+    &-jonathan {
         align-self: stretch;
-        @include grid(card-jonathan,$white,$dark-grayish-blue);
+        @include grid(card-jonathan, $white, $dark-grayish-blue);
     }
 
-    &-jean{
-        @include grid(card-jean,$dark-grayish-blue,$white);
+    &-jean {
+        @include grid(card-jean, $dark-grayish-blue, $white);
     }
 
-    &-patrick{
-        @include grid(card-patrick,$white,$dark-blue);
+    &-patrick {
+        @include grid(card-patrick, $white, $dark-blue);
     }
 
-    &-kira{
-        @include grid(card-kira,$dark-grayish-blue,$white);
-    }   
+    &-kira {
+        @include grid(card-kira, $dark-grayish-blue, $white);
+    }
 }
 
-@media screen and (max-width:768px){
-
-    .card{
+@media screen and (max-width: 768px) {
+    .card {
         grid-template-columns: 1fr;
-        grid-template-areas:"card-daniel"
-                            "card-jonathan"
-                            "card-jean"
-                            "card-patrick"
-                            "card-kira";
+        grid-template-areas:
+            "card-daniel"
+            "card-jonathan"
+            "card-jean"
+            "card-patrick"
+            "card-kira";
     }
 }
 //Quedo atenta a las observaciones

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 body {
+  font-family: 'Roboto';
   background-color: #ecf2f8;
   font-size: 15px; }
 
@@ -11,33 +12,33 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
-  grid-template-areas: "card-daniel  card-daniel   card-jonathan  card-kira" "card-jean    card-patrick  card-patrick   card-kira";
+  grid-template-areas: "card-daniel  card-daniel   card-jonathan  card-kira" "card-jean    card-patrick  card-patrick   card-kira";
   max-width: 1440px;
   margin: 80px auto; }
-  .card-daniel {
+  .card-avatar {
     grid-area: card-daniel;
     color: white;
     background-color: #7541c8;
     border-radius: 7px;
     position: relative; }
-    .card-daniel__space {
+    .card-avatar__space {
       margin: 0px; }
-      .card-daniel__space--bottom {
+      .card-avatar__space--bottom {
         margin-bottom: 0px; }
-    .card-daniel__img {
+    .card-avatar__img {
       float: left;
       /*Colocar la img al lado del texto*/
       border-radius: 50%;
       /*Permite poner la imagen circular*/
       padding: 5px; }
-    .card-daniel__img2 {
+    .card-avatar__quotes {
       float: right;
       position: absolute;
       top: 0px;
       right: 70px; }
-    .card-daniel__opacity {
+    .card-avatar--opacity {
       opacity: 0.5; }
-      .card-daniel__opacity--seventy {
+      .card-avatar--opacity--seventy {
         opacity: 0.7; }
   .card-jonathan {
     align-self: stretch;
@@ -64,4 +65,4 @@ body {
 @media screen and (max-width: 768px) {
   .card {
     grid-template-columns: 1fr;
-    grid-template-areas: "card-daniel" "card-jonathan" "card-jean" "card-patrick" "card-kira"; } }
+    grid-template-areas: "card-daniel" "card-jonathan" "card-jean" "card-patrick" "card-kira"; } }
