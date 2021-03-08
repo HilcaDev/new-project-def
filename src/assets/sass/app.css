@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 body {
-  background-color: #ecf2f8;
+  font-family: 'Roboto';
+  background-color: red;
   font-size: 15px;
 }
 
@@ -21,7 +22,7 @@ body {
   margin: 80px auto;
 }
 
-.card-daniel {
+.card-avatar {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
@@ -32,15 +33,15 @@ body {
   position: relative;
 }
 
-.card-daniel__space {
+.card-avatar__space {
   margin: 0px;
 }
 
-.card-daniel__space--bottom {
+.card-avatar__space--bottom {
   margin-bottom: 0px;
 }
 
-.card-daniel__img {
+.card-avatar__img {
   float: left;
   /*Colocar la img al lado del texto*/
   border-radius: 50%;
@@ -48,18 +49,18 @@ body {
   padding: 5px;
 }
 
-.card-daniel__img2 {
+.card-avatar__quotes {
   float: right;
   position: absolute;
   top: 0px;
   right: 70px;
 }
 
-.card-daniel__opacity {
+.card-avatar--opacity {
   opacity: 0.5;
 }
 
-.card-daniel__opacity--seventy {
+.card-avatar--opacity--seventy {
   opacity: 0.7;
 }
 
