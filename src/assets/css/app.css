@@ -7,12 +7,30 @@ body {
 .card {
   display: flex;
   max-width: 1440px;
-  margin: 80px auto; }
+  margin: 80px auto;
+  justify-content: center; }
+  .card-main {
+    flex-basis: 70%;
+    display: flex;
+    flex-wrap: wrap; }
+    .card-main-row {
+      display: flex; }
+  .card-avatar--aside {
+    color: #48556a;
+    background-color: white;
+    border-radius: 7px;
+    padding: 5px;
+    margin: 10px;
+    flex-basis: 20%; }
   .card-avatar {
     color: white;
     background-color: #7541c8;
     border-radius: 7px;
-    position: relative; }
+    padding: 5px;
+    margin: 10px;
+    position: relative;
+    order: 1;
+    flex-basis: 65%; }
     .card-avatar__space {
       margin: 0px; }
       .card-avatar__space--bottom {
@@ -35,27 +53,32 @@ body {
   .card-avatar--jonathan {
     color: white;
     background-color: #48556a;
-    border-radius: 7px; }
+    border-radius: 7px;
+    padding: 5px;
+    margin: 10px;
+    order: 2;
+    flex-basis: 35%; }
   .card-avatar--jean {
     color: #48556a;
     background-color: white;
-    border-radius: 7px; }
+    border-radius: 7px;
+    padding: 5px;
+    margin: 10px;
+    order: 3;
+    flex-basis: 35%; }
   .card-avatar--patrick {
     color: white;
     background-color: #19212e;
-    border-radius: 7px; }
-  .card-avatar--kira {
-    color: #48556a;
-    background-color: white;
     border-radius: 7px;
-    order: 2;
-    flex-grow: 1; }
-  .card-avatar-flex {
-    order: 1;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: row; }
-    .card-avatar-flex-one {
-      flex-grow: 1; }
-    .card-avatar-flex-two {
-      flex-grow: 1; }
+    padding: 5px;
+    margin: 10px;
+    order: 4;
+    flex-basis: 65%; }
+
+@media screen and (max-width: 400px) {
+  .card {
+    flex-direction: column; }
+    .card-main {
+      flex-direction: column; }
+      .card-main-row {
+        flex-direction: column; } }

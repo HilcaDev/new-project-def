@@ -11,13 +11,49 @@ body {
   display: flex;
   max-width: 1440px;
   margin: 80px auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-main {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card-main-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.card-avatar--aside {
+  color: #48556a;
+  background-color: white;
+  border-radius: 7px;
+  padding: 5px;
+  margin: 10px;
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
 }
 
 .card-avatar {
   color: white;
   background-color: #7541c8;
   border-radius: 7px;
+  padding: 5px;
+  margin: 10px;
   position: relative;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
 }
 
 .card-avatar__space {
@@ -55,57 +91,59 @@ body {
   color: white;
   background-color: #48556a;
   border-radius: 7px;
+  padding: 5px;
+  margin: 10px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
 }
 
 .card-avatar--jean {
   color: #48556a;
   background-color: white;
   border-radius: 7px;
+  padding: 5px;
+  margin: 10px;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
 }
 
 .card-avatar--patrick {
   color: white;
   background-color: #19212e;
   border-radius: 7px;
+  padding: 5px;
+  margin: 10px;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
+  -ms-flex-preferred-size: 65%;
+      flex-basis: 65%;
 }
 
-.card-avatar--kira {
-  color: #48556a;
-  background-color: white;
-  border-radius: 7px;
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.card-avatar-flex {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.card-avatar-flex-one {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-}
-
-.card-avatar-flex-two {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+@media screen and (max-width: 400px) {
+  .card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card-main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card-main-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=app.css.map */

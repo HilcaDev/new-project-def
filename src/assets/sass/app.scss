@@ -5,12 +5,29 @@
     display: flex;
     max-width: 1440px;
     margin: 80px auto;
+    justify-content: center;   
+    
+    &-main {
+        flex-basis:70%;
+        display:flex;
+        flex-wrap: wrap;
+        
+        &-row{
+            display: flex;
+        }
+    } 
+
+    &-avatar--aside {
+        @include color($dark-grayish-blue, $white);
+        flex-basis:20%;
+    } 
+    
     &-avatar {
         @include color($white, $violet);
         position: relative;
-       
+        order:1;
+        flex-basis: 65%;
         
-
         &__space {
             margin: 0px;
             &--bottom {
@@ -41,48 +58,35 @@
 
     &-avatar--jonathan{
         @include color( $white, $dark-grayish-blue);
-       
-       
+        order:2;
+        flex-basis: 35%;
     }
 
     &-avatar--jean {
         @include color($dark-grayish-blue, $white);
-       
-    
-        
+        order:3;
+        flex-basis: 35%;
     }
 
     &-avatar--patrick{
-        @include color($white, $dark-blue);        
+        @include color($white, $dark-blue);   
+        order:4;    
+        flex-basis: 65%
     }
 
-    &-avatar--kira {
-        
-        @include color($dark-grayish-blue, $white);
-        order:2;
-        flex-grow: 1;
-        
-        
-        
-    } 
-
-    &-avatar-flex {
-        order:1;
-        flex-grow: 1;
-        display:flex;
-        flex-direction: row;
-
-        &-one{
-            flex-grow: 1;
-
-        }
-        &-two{
-            flex-grow: 1;
-
-        }
-        
-    } 
 }
 
+@media screen and (max-width:400px){
+    
+    .card {
+        flex-direction: column;
+        &-main{
+            flex-direction: column;
+            &-row{
+                flex-direction: column;
+            }
+        }
+    } 
+}
 
 
