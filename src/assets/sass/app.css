@@ -1,32 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 body {
   font-family: 'Roboto';
-  background-color: red;
+  background-color: #ecf2f8;
   font-size: 15px;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0 7px;
-}
-
 .card {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  grid-gap: 15px;
-      grid-template-areas: "card-daniel  card-daniel   card-jonathan  card-kira" "card-jean    card-patrick  card-patrick   card-kira";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   max-width: 1440px;
   margin: 80px auto;
 }
 
 .card-avatar {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: card-daniel;
   color: white;
   background-color: #7541c8;
   border-radius: 7px;
@@ -64,52 +51,61 @@ body {
   opacity: 0.7;
 }
 
-.card-jonathan {
-  -ms-flex-item-align: stretch;
-      -ms-grid-row-align: stretch;
-      align-self: stretch;
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: card-jonathan;
+.card-avatar--jonathan {
   color: white;
   background-color: #48556a;
   border-radius: 7px;
 }
 
-.card-jean {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  grid-area: card-jean;
+.card-avatar--jean {
   color: #48556a;
   background-color: white;
   border-radius: 7px;
 }
 
-.card-patrick {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
-  grid-area: card-patrick;
+.card-avatar--patrick {
   color: white;
   background-color: #19212e;
   border-radius: 7px;
 }
 
-.card-kira {
-  -ms-grid-row: 1;
-  -ms-grid-row-span: 2;
-  -ms-grid-column: 4;
-  grid-area: card-kira;
+.card-avatar--kira {
   color: #48556a;
   background-color: white;
   border-radius: 7px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
-@media screen and (max-width: 768px) {
-  .card {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-        grid-template-areas: "card-daniel" "card-jonathan" "card-jean" "card-patrick" "card-kira";
-  }
+.card-avatar-flex {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.card-avatar-flex-one {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.card-avatar-flex-two {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 /*# sourceMappingURL=app.css.map */

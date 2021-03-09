@@ -2,7 +2,3 @@ body {
   font-family: 'Roboto';
   background-color: #ecf2f8;
   font-size: 15px; }
-
-* {
-  box-sizing: border-box;
-  padding: 0 7px; }

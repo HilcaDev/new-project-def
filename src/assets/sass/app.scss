@@ -2,18 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 .card {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 15px;
-    grid-template-areas:
-        "card-daniel  card-daniel   card-jonathan  card-kira"
-        "card-jean    card-patrick  card-patrick   card-kira";
-
+    display: flex;
     max-width: 1440px;
     margin: 80px auto;
     &-avatar {
-        @include grid(card-daniel, $white, $violet);
+        @include color($white, $violet);
         position: relative;
+       
+        
 
         &__space {
             margin: 0px;
@@ -43,33 +39,50 @@
         }
     }
 
-    &-jonathan {
-        align-self: stretch;
-        @include grid(card-jonathan, $white, $dark-grayish-blue);
+    &-avatar--jonathan{
+        @include color( $white, $dark-grayish-blue);
+       
+       
     }
 
-    &-jean {
-        @include grid(card-jean, $dark-grayish-blue, $white);
+    &-avatar--jean {
+        @include color($dark-grayish-blue, $white);
+       
+    
+        
     }
 
-    &-patrick {
-        @include grid(card-patrick, $white, $dark-blue);
+    &-avatar--patrick{
+        @include color($white, $dark-blue);        
     }
 
-    &-kira {
-        @include grid(card-kira, $dark-grayish-blue, $white);
-    }
+    &-avatar--kira {
+        
+        @include color($dark-grayish-blue, $white);
+        order:2;
+        flex-grow: 1;
+        
+        
+        
+    } 
+
+    &-avatar-flex {
+        order:1;
+        flex-grow: 1;
+        display:flex;
+        flex-direction: row;
+
+        &-one{
+            flex-grow: 1;
+
+        }
+        &-two{
+            flex-grow: 1;
+
+        }
+        
+    } 
 }
 
-@media screen and (max-width: 768px) {
-    .card {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "card-daniel"
-            "card-jonathan"
-            "card-jean"
-            "card-patrick"
-            "card-kira";
-    }
-}
-//Quedo atenta a las observaciones
+
+

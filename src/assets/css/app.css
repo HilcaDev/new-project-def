@@ -4,19 +4,11 @@ body {
   background-color: #ecf2f8;
   font-size: 15px; }
 
-* {
-  box-sizing: border-box;
-  padding: 0 7px; }
-
 .card {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 15px;
-  grid-template-areas: "card-daniel  card-daniel   card-jonathan  card-kira" "card-jean    card-patrick  card-patrick   card-kira";
+  display: flex;
   max-width: 1440px;
   margin: 80px auto; }
   .card-avatar {
-    grid-area: card-daniel;
     color: white;
     background-color: #7541c8;
     border-radius: 7px;
@@ -40,29 +32,30 @@ body {
       opacity: 0.5; }
       .card-avatar--opacity--seventy {
         opacity: 0.7; }
-  .card-jonathan {
-    align-self: stretch;
-    grid-area: card-jonathan;
+  .card-avatar--jonathan {
     color: white;
     background-color: #48556a;
     border-radius: 7px; }
-  .card-jean {
-    grid-area: card-jean;
+  .card-avatar--jean {
     color: #48556a;
     background-color: white;
     border-radius: 7px; }
-  .card-patrick {
-    grid-area: card-patrick;
+  .card-avatar--patrick {
     color: white;
     background-color: #19212e;
     border-radius: 7px; }
-  .card-kira {
-    grid-area: card-kira;
+  .card-avatar--kira {
     color: #48556a;
     background-color: white;
-    border-radius: 7px; }
-
-@media screen and (max-width: 768px) {
-  .card {
-    grid-template-columns: 1fr;
-    grid-template-areas: "card-daniel" "card-jonathan" "card-jean" "card-patrick" "card-kira"; } }
+    border-radius: 7px;
+    order: 2;
+    flex-grow: 1; }
+  .card-avatar-flex {
+    order: 1;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row; }
+    .card-avatar-flex-one {
+      flex-grow: 1; }
+    .card-avatar-flex-two {
+      flex-grow: 1; }
