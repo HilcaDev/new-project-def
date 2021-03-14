@@ -10,12 +10,12 @@ body {
   margin: 80px auto;
   justify-content: center; }
   .card-main {
-    flex-basis: 70%;
+    flex-basis: 80%;
     display: flex;
     flex-wrap: wrap; }
-    .card-main-row {
+    .card-main-section {
       display: flex; }
-  .card-avatar--aside {
+  .card-aside {
     color: #48556a;
     background-color: white;
     border-radius: 7px;
@@ -80,5 +80,5 @@ body {
     flex-direction: column; }
     .card-main {
       flex-direction: column; }
-      .card-main-row {
+      .card-main-section {
         flex-direction: column; } }

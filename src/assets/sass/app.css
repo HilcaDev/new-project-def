@@ -17,8 +17,8 @@ body {
 }
 
 .card-main {
-  -ms-flex-preferred-size: 70%;
-      flex-basis: 70%;
+  -ms-flex-preferred-size: 80%;
+      flex-basis: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -26,13 +26,13 @@ body {
       flex-wrap: wrap;
 }
 
-.card-main-row {
+.card-main-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.card-avatar--aside {
+.card-aside {
   color: #48556a;
   background-color: white;
   border-radius: 7px;
@@ -139,7 +139,7 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .card-main-row {
+  .card-main-section {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;

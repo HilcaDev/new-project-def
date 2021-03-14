@@ -1,12 +1,6 @@
 body {
   font-family: 'Roboto';
-  background-color: red;
+  background-color: #ecf2f8;
   font-size: 15px;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 0 7px;
 }
 /*# sourceMappingURL=theme.css.map */

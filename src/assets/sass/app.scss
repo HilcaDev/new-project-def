@@ -8,16 +8,16 @@
     justify-content: center;   
     
     &-main {
-        flex-basis:70%;
+        flex-basis:80%;
         display:flex;
         flex-wrap: wrap;
         
-        &-row{
+        &-section{
             display: flex;
         }
     } 
-
-    &-avatar--aside {
+        
+    &-aside {
         @include color($dark-grayish-blue, $white);
         flex-basis:20%;
     } 
@@ -82,7 +82,7 @@
         flex-direction: column;
         &-main{
             flex-direction: column;
-            &-row{
+            &-section{
                 flex-direction: column;
             }
         }
