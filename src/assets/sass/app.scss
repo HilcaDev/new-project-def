@@ -5,29 +5,29 @@
     display: flex;
     max-width: 1440px;
     margin: 80px auto;
-    justify-content: center;   
-    
+    justify-content: center;
+
     &-main {
-        flex-basis:80%;
-        display:flex;
+        flex-basis: 80%;
+        display: flex;
         flex-wrap: wrap;
-        
-        &-section{
+
+        &-section {
             display: flex;
         }
-    } 
-        
+    }
+
     &-aside {
         @include color($dark-grayish-blue, $white);
-        flex-basis:20%;
-    } 
-    
+        flex-basis: 20%;
+    }
+
     &-avatar {
         @include color($white, $violet);
         position: relative;
-        order:1;
+        order: 1;
         flex-basis: 65%;
-        
+
         &__space {
             margin: 0px;
             &--bottom {
@@ -36,8 +36,8 @@
         }
 
         &__img {
-            float: left; /*Colocar la img al lado del texto*/
-            border-radius: 50%; /*Permite poner la imagen circular*/
+            float: left;
+            border-radius: 50%;
             padding: 5px;
         }
 
@@ -54,39 +54,35 @@
                 opacity: 0.7;
             }
         }
-    }
 
-    &-avatar--jonathan{
-        @include color( $white, $dark-grayish-blue);
-        order:2;
-        flex-basis: 35%;
+        &--jonathan {
+            @include color($white, $dark-grayish-blue);
+            order: 2;
+            flex-basis: 35%;
+        }
+    
+        &--jean {
+            @include color($dark-grayish-blue, $white);
+            order: 3;
+            flex-basis: 35%;
+        }
+    
+        &--patrick {
+            @include color($white, $dark-blue);
+            order: 4;
+            flex-basis: 65%;
+        }
     }
-
-    &-avatar--jean {
-        @include color($dark-grayish-blue, $white);
-        order:3;
-        flex-basis: 35%;
-    }
-
-    &-avatar--patrick{
-        @include color($white, $dark-blue);   
-        order:4;    
-        flex-basis: 65%
-    }
-
 }
 
-@media screen and (max-width:400px){
-    
+@media screen and (max-width: 800px) {
     .card {
         flex-direction: column;
-        &-main{
+        &-main {
             flex-direction: column;
-            &-section{
+            &-section {
                 flex-direction: column;
             }
         }
-    } 
+    }
 }
-
-

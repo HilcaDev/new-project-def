@@ -37,9 +37,7 @@ body {
         margin-bottom: 0px; }
     .card-avatar__img {
       float: left;
-      /*Colocar la img al lado del texto*/
       border-radius: 50%;
-      /*Permite poner la imagen circular*/
       padding: 5px; }
     .card-avatar__quotes {
       float: right;
@@ -50,32 +48,32 @@ body {
       opacity: 0.5; }
       .card-avatar--opacity--seventy {
         opacity: 0.7; }
-  .card-avatar--jonathan {
-    color: white;
-    background-color: #48556a;
-    border-radius: 7px;
-    padding: 5px;
-    margin: 10px;
-    order: 2;
-    flex-basis: 35%; }
-  .card-avatar--jean {
-    color: #48556a;
-    background-color: white;
-    border-radius: 7px;
-    padding: 5px;
-    margin: 10px;
-    order: 3;
-    flex-basis: 35%; }
-  .card-avatar--patrick {
-    color: white;
-    background-color: #19212e;
-    border-radius: 7px;
-    padding: 5px;
-    margin: 10px;
-    order: 4;
-    flex-basis: 65%; }
+    .card-avatar--jonathan {
+      color: white;
+      background-color: #48556a;
+      border-radius: 7px;
+      padding: 5px;
+      margin: 10px;
+      order: 2;
+      flex-basis: 35%; }
+    .card-avatar--jean {
+      color: #48556a;
+      background-color: white;
+      border-radius: 7px;
+      padding: 5px;
+      margin: 10px;
+      order: 3;
+      flex-basis: 35%; }
+    .card-avatar--patrick {
+      color: white;
+      background-color: #19212e;
+      border-radius: 7px;
+      padding: 5px;
+      margin: 10px;
+      order: 4;
+      flex-basis: 65%; }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 800px) {
   .card {
     flex-direction: column; }
     .card-main {
